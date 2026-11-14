@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Меню — MOKA COFFEE</title>
+  <meta name="description" content="Меню MOKA COFFEE: классический кофе, авторские напитки и холодные напитки. Цены и корзина.">
+  <meta name="theme-color" content="#F5F0E8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/menu.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="MOKA COFFEE — на главную">MOKA<span>COFFEE</span></a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню навигации">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li><a class="site-nav__link" href="menu.html" aria-current="page">Меню</a></li>
+          <li><a class="site-nav__link" href="about.html">О нас</a></li>
+          <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+        <a class="btn btn--small site-nav__cta" href="contacts.html">Как нас найти</a>
+      </nav>
+
+      <button class="cart-toggle" id="cart-toggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="cart" aria-label="Открыть корзину, она пуста">
+        <svg class="cart-toggle__icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M5.5 8.5h13l-1.1 11.5H6.6L5.5 8.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8.5V7.4a3 3 0 0 1 6 0v1.1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span class="cart-toggle__count" id="cart-count" aria-hidden="true" hidden>0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="menu-title">
+      <div class="container">
+        <p class="eyebrow hero__anim hero__anim--0">MOKA COFFEE</p>
+        <h1 class="page-hero__title hero__anim hero__anim--1" id="menu-title">Наше меню</h1>
+        <p class="page-hero__text hero__anim hero__anim--2">Классический эспрессо, авторские напитки и холодный кофе — всё готовим из тщательно отобранных зёрен.</p>
+      </div>
+    </section>
+
+    <section class="section menu" aria-label="Каталог напитков">
+      <div class="container">
+        <div class="filters" id="menu-filters" role="group" aria-label="Категории напитков">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">Все напитки</button>
+          <button class="filter-btn" type="button" data-filter="classic" aria-pressed="false">Классический кофе</button>
+          <button class="filter-btn" type="button" data-filter="signature" aria-pressed="false">Авторский кофе</button>
+          <button class="filter-btn" type="button" data-filter="cold" aria-pressed="false">Холодные напитки</button>
+        </div>
+        <p class="menu__status" id="menu-status" role="status">Показано 12 напитков</p>
+
+        <ul class="menu__grid" id="menu-grid">
+          <li class="drink-card" data-reveal data-id="espresso" data-name="Espresso" data-price="180" data-category="classic">
+            <figure class="drink-card__media">
+              <img src="assets/images/espresso.svg" width="480" height="480" loading="lazy" alt="Эспрессо в чашке с кубиком сахара, вид сверху">
+              <figcaption class="drink-card__tag">Классика</figcaption>
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Espresso</h3>
+              <p class="drink-card__text">Насыщенный и концентрированный. Основа любого кофейного напитка.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>180&nbsp;₽</p>
+                <button class="btn btn--small drink-card__add" type="button" data-action="add" aria-label="Добавить в корзину: Espresso, 180 ₽">В корзину</button>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal data-id="americano" data-name="Americano" data-price="210" data-category="classic">
+            <figure class="drink-card__media">
+              <img src="assets/images/americano.svg" width="480" height="480" loading="lazy" alt="Американо в чашке, вид сверху">
+              <figcaption class="drink-card__tag">Классика</figcaption>
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Americano</h3>
+              <p class="drink-card__text">Эспрессо с горячей водой — мягкий вкус и чистое послевкусие.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>210&nbsp;₽</p>
+                <button class="btn btn--small drink-card__add" type="button" data-action="add" aria-label="Добавить в корзину: Americano, 210 ₽">В корзину</button>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal data-id="cappuccino" data-name="Cappuccino" data-price="250" data-category="classic">
+            <figure class="drink-card__media">
+              <img src="assets/images/cappuccino.svg" width="480" height="480" loading="lazy" alt="Капучино с сердечком из молочной пены, вид сверху">
+              <figcaption class="drink-card__tag">Классика</figcaption>
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Cappuccino</h3>
+              <p class="drink-card__text">Классический эспрессо с плотной молочной пеной и мягким сливочным вкусом.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>250&nbsp;₽</p>
+                <button class="btn btn--small drink-card__add" type="button" data-action="add" aria-label="Добавить в корзину: Cappuccino, 250 ₽">В корзину</button>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal data-id="flat-white" data-name="Flat White" data-price="290" data-category="classic">
+            <figure class="drink-card__media">
+              <img src="assets/images/flat-white.svg" width="480" height="480" loading="lazy" alt="Флэт уайт с тюльпаном из молочной пены, вид сверху">
+              <figcaption class="drink-card__tag">Классика</figcaption>
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Flat White</h3>
+              <p class="drink-card__text">Двойной эспрессо с бархатистым молоком и насыщенным кофейным вкусом.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>290&nbsp;₽</p>
+                <button class="btn btn--small drink-card__add" type="button" data-action="add" aria-label="Добавить в корзину: Flat White, 290 ₽">В корзину</button>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal data-id="caffe-latte" data-name="Caffe Latte" data-price="270" data-category="classic">
+            <figure class="drink-card__media">
+              <img src="assets/images/caffe-latte.svg" width="480" height="480" loading="lazy" alt="Кофе латте с рисунком из молочной пены, вид сверху">
+              <figcaption class="drink-card__tag">Классика</figcaption>
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Caffe Latte</h3>
+              <p class="drink-card__text">Нежный напиток с большим количеством молока и лёгкой сладостью.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>270&nbsp;₽</p>
+                <button class="btn btn--small drink-card__add" type="button" data-action="add" aria-label="Добавить в корзину: Caffe Latte, 270 ₽">В корзину</button>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal data-id="raf-coffee" data-name="Raf Coffee" data-price="320" data-category="signature">
+            <figure class="drink-card__media">
+              <img src="assets/images/raf-coffee.svg" width="480" height="480" loading="lazy" alt="Раф кофе со сливочной пеной и ванилью, вид сверху">
+              <figcaption class="drink-card__tag">Авторский</figcaption>
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Raf Coffee</h3>
+              <p class="drink-card__text">Эспрессо со сливками и ванильным сахаром — густой, сладкий и тёплый.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>320&nbsp;₽</p>
+                <button class="btn btn--small drink-card__add" type="button" data-action="add" aria-label="Добавить в корзину: Raf Coffee, 320 ₽">В корзину</button>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal data-id="mocha" data-name="Mocha" data-price="300" data-category="signature">
+            <figure class="drink-card__media">
+              <img src="assets/images/mocha.svg" width="480" height="480" loading="lazy" alt="Мокка со сливками и шоколадной сеткой, вид сверху">
+              <figcaption class="drink-card__tag">Авторский</figcaption>
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Mocha</h3>
+              <p class="drink-card__text">Эспрессо, горячий шоколад и молоко под сливочной шапкой.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>300&nbsp;₽</p>
+                <button class="btn btn--small drink-card__add" type="button" data-action="add" aria-label="Добавить в корзину: Mocha, 300 ₽">В корзину</button>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal data-id="caramel-latte" data-name="Caramel Latte" data-price="310" data-category="signature">
+            <figure class="drink-card__media">
+              <img src="assets/images/caramel-latte.svg" width="480" height="480" loading="lazy" alt="Карамельный латте с карамельной сеткой, вид сверху">
+              <figcaption class="drink-card__tag">Авторский</figcaption>
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Caramel Latte</h3>
+              <p class="drink-card__text">Нежный латте с карамельным сиропом и тонкой сеточкой карамели.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>310&nbsp;₽</p>
+                <button class="btn btn--small drink-card__add" type="button" data-action="add" aria-label="Добавить в корзину: Caramel Latte, 310 ₽">В корзину</button>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal data-id="iced-americano" data-name="Iced Americano" data-price="230" data-category="cold">
+            <figure class="drink-card__media">
+              <img src="assets/images/iced-americano.svg" width="480" height="480" loading="lazy" alt="Айс американо со льдом, вид сверху">
+              <figcaption class="drink-card__tag">Холодный</figcaption>
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Iced Americano</h3>
+              <p class="drink-card__text">Эспрессо со льдом и холодной водой — свежий и бодрящий.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>230&nbsp;₽</p>
+                <button class="btn btn--small drink-card__add" type="button" data-action="add" aria-label="Добавить в корзину: Iced Americano, 230 ₽">В корзину</button>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal data-id="iced-latte" data-name="Iced Latte" data-price="290" data-category="cold">
+            <figure class="drink-card__media">
+              <img src="assets/images/iced-latte.svg" width="480" height="480" loading="lazy" alt="Айс латте с молоком и льдом, вид сверху">
+              <figcaption class="drink-card__tag">Холодный</figcaption>
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Iced Latte</h3>
+              <p class="drink-card__text">Холодное молоко, эспрессо и лёд — мягко и освежающе.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>290&nbsp;₽</p>
+                <button class="btn btn--small drink-card__add" type="button" data-action="add" aria-label="Добавить в корзину: Iced Latte, 290 ₽">В корзину</button>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal data-id="espresso-tonic" data-name="Espresso Tonic" data-price="330" data-category="cold">
+            <figure class="drink-card__media">
+              <img src="assets/images/espresso-tonic.svg" width="480" height="480" loading="lazy" alt="Эспрессо тоник со льдом и долькой цитруса, вид сверху">
+              <figcaption class="drink-card__tag">Холодный</figcaption>
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Espresso Tonic</h3>
+              <p class="drink-card__text">Эспрессо поверх тоника со льдом и долькой цитруса — яркий и игристый.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>330&nbsp;₽</p>
+                <button class="btn btn--small drink-card__add" type="button" data-action="add" aria-label="Добавить в корзину: Espresso Tonic, 330 ₽">В корзину</button>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal data-id="cold-brew" data-name="Cold Brew" data-price="300" data-category="cold">
+            <figure class="drink-card__media">
+              <img src="assets/images/cold-brew.svg" width="480" height="480" loading="lazy" alt="Колд брю со льдом, вид сверху">
+              <figcaption class="drink-card__tag">Холодный</figcaption>
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Cold Brew</h3>
+              <p class="drink-card__text">Кофе холодного заваривания: плавный, сладковатый, без горечи.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>300&nbsp;₽</p>
+                <button class="btn btn--small drink-card__add" type="button" data-action="add" aria-label="Добавить в корзину: Cold Brew, 300 ₽">В корзину</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="logo logo--light" href="index.html" aria-label="MOKA COFFEE — на главную">MOKA<span>COFFEE</span></a>
+        <p class="footer__text">Specialty coffee shop. Кофе, сваренный с вниманием.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <h2 class="footer__title">Разделы</h2>
+        <ul class="footer__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="footer__contact">
+        <h2 class="footer__title">Посетить нас</h2>
+        <p class="footer__text">Адрес, часы работы и карта — на странице контактов.</p>
+        <a class="footer__link" href="contacts.html">Перейти к контактам</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 MOKA COFFEE. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+
+  <div class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="cart__header">
+      <h2 class="cart__title" id="cart-title">Корзина</h2>
+      <button class="cart__close" id="cart-close" type="button" aria-label="Закрыть корзину">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="cart__view" id="cart-view-cart">
+      <p class="cart__notice" id="cart-notice" role="status" hidden>Не удалось сохранить корзину в браузере: после перезагрузки страницы она будет очищена.</p>
+      <div class="cart__body">
+        <ul class="cart__list" id="cart-list"></ul>
+        <div class="cart__empty" id="cart-empty">
+          <p class="cart__empty-title">Корзина пока пуста</p>
+          <p class="cart__empty-text">Добавьте напитки из меню — они появятся здесь.</p>
+          <button class="btn btn--ghost btn--small" type="button" id="cart-empty-close">Выбрать напитки</button>
+        </div>
+      </div>
+      <div class="cart__footer" id="cart-footer" hidden>
+        <p class="cart__total"><span>Итого</span><strong id="cart-total">0&nbsp;₽</strong></p>
+        <button class="btn btn--block" type="button" id="cart-checkout">Оформить заказ</button>
+        <button class="link-button" type="button" id="cart-clear">Очистить корзину</button>
+      </div>
+    </div>
+
+    <div class="cart__view" id="cart-view-checkout" hidden>
+      <form class="checkout" id="checkout-form" novalidate>
+        <div class="cart__body">
+          <h3 class="cart__subtitle" id="checkout-title" tabindex="-1">Оформление заказа</h3>
+          <p class="checkout__lead">Это демонстрационное оформление: заказ никуда не отправляется, оплата не требуется.</p>
+          <p class="checkout__sum"><span id="checkout-count"></span><strong id="checkout-total"></strong></p>
+          <div class="field">
+            <label class="field__label" for="checkout-name">Ваше имя</label>
+            <input class="field__input" id="checkout-name" name="name" type="text" maxlength="40" autocomplete="given-name" required aria-describedby="checkout-name-error">
+            <p class="field__error" id="checkout-name-error"></p>
+          </div>
+        </div>
+        <div class="cart__footer">
+          <button class="btn btn--block" type="submit">Подтвердить заказ</button>
+          <button class="link-button" type="button" id="checkout-back">Вернуться в корзину</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="cart__view" id="cart-view-success" hidden>
+      <div class="cart__body success">
+        <span class="success__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="30" height="30" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 class="cart__subtitle" id="success-title" tabindex="-1">Заказ оформлен</h3>
+        <p class="success__text" id="success-text"></p>
+        <p class="success__number"><span>Номер заказа</span><strong id="success-number"></strong></p>
+        <ul class="success__list" id="success-list"></ul>
+        <p class="cart__total"><span>Итого</span><strong id="success-total"></strong></p>
+        <p class="success__note">Демонстрационный заказ: в кофейню он не передаётся.</p>
+      </div>
+      <div class="cart__footer">
+        <button class="btn btn--block" type="button" id="success-close">Вернуться в меню</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="visually-hidden" id="cart-announcer" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

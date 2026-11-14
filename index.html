@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MOKA COFFEE — specialty coffee shop</title>
+  <meta name="description" content="MOKA COFFEE — кофейня specialty-кофе: свежая обжарка, внимательные бариста и спокойная атмосфера.">
+  <meta name="theme-color" content="#F5F0E8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="MOKA COFFEE — на главную">MOKA<span>COFFEE</span></a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню навигации">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html" aria-current="page">Главная</a></li>
+          <li><a class="site-nav__link" href="menu.html">Меню</a></li>
+          <li><a class="site-nav__link" href="about.html">О нас</a></li>
+          <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+        <a class="btn btn--small site-nav__cta" href="contacts.html">Как нас найти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow hero__anim hero__anim--0">Specialty coffee shop</p>
+          <h1 class="hero__title hero__anim hero__anim--1" id="hero-title">Кофе, который<br>хочется <em>растянуть</em></h1>
+          <p class="hero__text hero__anim hero__anim--2">Небольшие партии зерна, точная экстракция и тишина вокруг чашки. MOKA COFFEE — место для тех, кто ценит вкус.</p>
+          <div class="hero__actions hero__anim hero__anim--3">
+            <a class="btn" href="menu.html">Смотреть меню</a>
+            <a class="btn btn--ghost" href="contacts.html">Как нас найти</a>
+          </div>
+        </div>
+        <figure class="hero__media hero__anim hero__anim--2">
+          <img src="assets/images/hero-coffee.svg" width="640" height="640" alt="Чашка кофе с латте-артом, вид сверху" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section features" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Почему MOKA</p>
+          <h2 class="section__title" id="features-title">Внимание к каждой детали</h2>
+        </header>
+
+        <ul class="features__grid">
+          <li class="feature-card" data-reveal>
+            <span class="feature-card__num" aria-hidden="true">01</span>
+            <h3 class="feature-card__title">Свежая обжарка</h3>
+            <p class="feature-card__text">Работаем с небольшими партиями зерна и подаём кофе в пик его вкуса.</p>
+          </li>
+          <li class="feature-card" data-reveal>
+            <span class="feature-card__num" aria-hidden="true">02</span>
+            <h3 class="feature-card__title">Понятное происхождение</h3>
+            <p class="feature-card__text">Знаем, откуда приходит каждое зерно, и рассказываем об этом в меню.</p>
+          </li>
+          <li class="feature-card" data-reveal>
+            <span class="feature-card__num" aria-hidden="true">03</span>
+            <h3 class="feature-card__title">Мастерство бариста</h3>
+            <p class="feature-card__text">Настраиваем помол и рецепт под зерно, чтобы раскрыть его характер.</p>
+          </li>
+          <li class="feature-card" data-reveal>
+            <span class="feature-card__num" aria-hidden="true">04</span>
+            <h3 class="feature-card__title">Спокойная атмосфера</h3>
+            <p class="feature-card__text">Тёплый свет, дерево и никакой суеты — чтобы остаться подольше.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section favorites" aria-labelledby="favorites-title">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Меню</p>
+          <h2 class="section__title" id="favorites-title">Наши фавориты</h2>
+        </header>
+
+        <ul class="favorites__grid">
+          <li class="drink-card" data-reveal>
+            <figure class="drink-card__media">
+              <img src="assets/images/cappuccino.svg" width="480" height="480" loading="lazy" alt="Капучино с сердечком из молочной пены, вид сверху">
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Cappuccino</h3>
+              <p class="drink-card__text">Классический эспрессо с плотной молочной пеной и мягким сливочным вкусом.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>250&nbsp;₽</p>
+                <a class="btn btn--small btn--ghost" href="menu.html" aria-label="В меню: Cappuccino">В меню</a>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal>
+            <figure class="drink-card__media">
+              <img src="assets/images/flat-white.svg" width="480" height="480" loading="lazy" alt="Флэт уайт с тюльпаном из молочной пены, вид сверху">
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Flat White</h3>
+              <p class="drink-card__text">Двойной эспрессо с бархатистым молоком и насыщенным кофейным вкусом.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>290&nbsp;₽</p>
+                <a class="btn btn--small btn--ghost" href="menu.html" aria-label="В меню: Flat White">В меню</a>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal>
+            <figure class="drink-card__media">
+              <img src="assets/images/caffe-latte.svg" width="480" height="480" loading="lazy" alt="Кофе латте с рисунком из молочной пены, вид сверху">
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Caffe Latte</h3>
+              <p class="drink-card__text">Нежный напиток с большим количеством молока и лёгкой сладостью.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>270&nbsp;₽</p>
+                <a class="btn btn--small btn--ghost" href="menu.html" aria-label="В меню: Caffe Latte">В меню</a>
+              </div>
+            </div>
+          </li>
+          <li class="drink-card" data-reveal>
+            <figure class="drink-card__media">
+              <img src="assets/images/raf-coffee.svg" width="480" height="480" loading="lazy" alt="Раф кофе со сливочной пеной и ванилью, вид сверху">
+            </figure>
+            <div class="drink-card__body">
+              <h3 class="drink-card__title">Raf Coffee</h3>
+              <p class="drink-card__text">Эспрессо со сливками и ванильным сахаром — густой, сладкий и тёплый.</p>
+              <div class="drink-card__footer">
+                <p class="drink-card__price"><span class="visually-hidden">Цена: </span>320&nbsp;₽</p>
+                <a class="btn btn--small btn--ghost" href="menu.html" aria-label="В меню: Raf Coffee">В меню</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="logo logo--light" href="index.html" aria-label="MOKA COFFEE — на главную">MOKA<span>COFFEE</span></a>
+        <p class="footer__text">Specialty coffee shop. Кофе, сваренный с вниманием.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <h2 class="footer__title">Разделы</h2>
+        <ul class="footer__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="footer__contact">
+        <h2 class="footer__title">Посетить нас</h2>
+        <p class="footer__text">Адрес, часы работы и карта — на странице контактов.</p>
+        <a class="footer__link" href="contacts.html">Перейти к контактам</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 MOKA COFFEE. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>
