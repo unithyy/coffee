@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакты — MOKA COFFEE</title>
+  <meta name="description" content="Контакты MOKA COFFEE: демонстрационный адрес, часы работы, телефон и форма обратной связи.">
+  <meta name="theme-color" content="#F5F0E8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/contacts.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="MOKA COFFEE — на главную">MOKA<span>COFFEE</span></a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню навигации">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li><a class="site-nav__link" href="menu.html">Меню</a></li>
+          <li><a class="site-nav__link" href="about.html">О нас</a></li>
+          <li><a class="site-nav__link" href="contacts.html" aria-current="page">Контакты</a></li>
+        </ul>
+        <a class="btn btn--small site-nav__cta" href="contacts.html">Как нас найти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="contacts-title">
+      <div class="container">
+        <p class="eyebrow hero__anim hero__anim--0">Контакты</p>
+        <h1 class="page-hero__title hero__anim hero__anim--1" id="contacts-title">Заходите на чашку кофе</h1>
+        <p class="page-hero__text hero__anim hero__anim--2">Напишите нам, позвоните или загляните в гости — будем рады.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight-top" aria-label="Контактная информация и форма обратной связи">
+      <div class="container contacts">
+        <div class="contacts__info" data-reveal>
+          <p class="demo-note" role="note">Адрес, телефон, почта и часы работы на этой странице — демонстрационные, это не реальные данные.</p>
+
+          <dl class="contact-list">
+            <div class="contact-list__row">
+              <dt class="contact-list__term">Адрес</dt>
+              <dd class="contact-list__value"><address>г. Примерск, ул. Кофейная, д. 1 (демо)</address></dd>
+            </div>
+            <div class="contact-list__row">
+              <dt class="contact-list__term">Телефон</dt>
+              <dd class="contact-list__value"><a class="contact-list__link" href="tel:+70000000000">+7 (000) 000-00-00</a></dd>
+            </div>
+            <div class="contact-list__row">
+              <dt class="contact-list__term">Почта</dt>
+              <dd class="contact-list__value"><a class="contact-list__link" href="mailto:hello@moka-coffee.example">hello@moka-coffee.example</a></dd>
+            </div>
+          </dl>
+
+          <h2 class="contacts__subtitle" id="hours-title">Часы работы</h2>
+          <ul class="hours" aria-labelledby="hours-title">
+            <li class="hours__row" data-days="1,2,3,4,5"><span class="hours__day">Пн–Пт</span><span class="hours__time">08:00 – 21:00</span></li>
+            <li class="hours__row" data-days="0,6"><span class="hours__day">Сб–Вс</span><span class="hours__time">09:00 – 22:00</span></li>
+          </ul>
+
+          <div class="contact-actions">
+            <a class="btn" href="tel:+70000000000" aria-label="Позвонить по демонстрационному номеру +7 (000) 000-00-00">Позвонить</a>
+            <a class="btn btn--ghost" href="mailto:hello@moka-coffee.example" aria-label="Написать на демонстрационную почту hello@moka-coffee.example">Написать на почту</a>
+            <a class="btn btn--ghost" href="#feedback">К форме</a>
+          </div>
+        </div>
+
+        <div class="form-card" id="feedback" data-reveal>
+          <h2 class="form-card__title" id="feedback-title">Напишите нам</h2>
+
+          <form class="contact-form" id="contact-form" novalidate aria-labelledby="feedback-title">
+            <p class="form-summary" id="form-summary" role="alert"></p>
+
+            <div class="form-grid">
+              <div class="field">
+                <label class="field__label" for="contact-name">Ваше имя</label>
+                <input class="field__input" id="contact-name" name="name" type="text" maxlength="60" autocomplete="given-name" required aria-describedby="contact-name-error">
+                <p class="field__error" id="contact-name-error"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="contact-email">Электронная почта</label>
+                <input class="field__input" id="contact-email" name="email" type="email" maxlength="100" autocomplete="email" inputmode="email" required aria-describedby="contact-email-error">
+                <p class="field__error" id="contact-email-error"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="contact-topic">Тема</label>
+                <select class="field__input field__input--select" id="contact-topic" name="topic" required aria-describedby="contact-topic-error">
+                  <option value="">Выберите тему</option>
+                  <option value="menu">Вопрос о меню</option>
+                  <option value="feedback">Отзыв или предложение</option>
+                  <option value="cooperation">Сотрудничество</option>
+                  <option value="other">Другое</option>
+                </select>
+                <p class="field__error" id="contact-topic-error"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="contact-message">Сообщение</label>
+                <textarea class="field__input field__input--area" id="contact-message" name="message" rows="5" maxlength="1000" required aria-describedby="contact-message-hint contact-message-error"></textarea>
+                <p class="field__hint" id="contact-message-hint">От 10 до 1000 символов.</p>
+                <p class="field__error" id="contact-message-error"></p>
+              </div>
+
+              <div class="field">
+                <label class="checkbox" for="contact-consent">
+                  <input type="checkbox" id="contact-consent" name="consent" required aria-describedby="contact-consent-error">
+                  <span>Согласен(на) на обработку введённых данных в демонстрационных целях</span>
+                </label>
+                <p class="field__error" id="contact-consent-error"></p>
+              </div>
+
+              <button class="btn btn--block" type="submit">Отправить сообщение</button>
+            </div>
+          </form>
+
+          <div class="form-success success" id="form-success" hidden>
+            <span class="success__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3 class="cart__subtitle" id="form-success-title" tabindex="-1">Сообщение принято</h3>
+            <p class="success__text" id="form-success-text" role="status"></p>
+            <p class="success__note">Это демонстрационная отправка: сообщение никуда не передано и нигде не сохранено.</p>
+            <button class="btn btn--ghost btn--small" type="button" id="form-again">Написать ещё одно сообщение</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--compact" aria-labelledby="map-title">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Как нас найти</p>
+          <h2 class="section__title" id="map-title">Мы в центре района</h2>
+        </header>
+        <figure class="map-card" data-reveal>
+          <img class="map-card__img" src="assets/images/map-demo.svg" width="1200" height="600" loading="lazy" alt="Схематичная карта района с отметкой кофейни (демонстрационная)">
+          <figcaption class="map-card__label">
+            <strong>MOKA COFFEE</strong>
+            <span>Демонстрационная точка. Схема не является реальной картой.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="logo logo--light" href="index.html" aria-label="MOKA COFFEE — на главную">MOKA<span>COFFEE</span></a>
+        <p class="footer__text">Specialty coffee shop. Кофе, сваренный с вниманием.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <h2 class="footer__title">Разделы</h2>
+        <ul class="footer__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="footer__contact">
+        <h2 class="footer__title">Посетить нас</h2>
+        <p class="footer__text">Адрес, часы работы и карта — на странице контактов.</p>
+        <a class="footer__link" href="contacts.html">Перейти к контактам</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 MOKA COFFEE. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>

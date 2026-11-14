@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>О нас — MOKA COFFEE</title>
+  <meta name="description" content="История MOKA COFFEE, наша философия, подход к выбору кофейного зерна и бариста, которые готовят каждую чашку с вниманием.">
+  <meta name="theme-color" content="#F5F0E8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="MOKA COFFEE — на главную">MOKA<span>COFFEE</span></a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню навигации">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li><a class="site-nav__link" href="menu.html">Меню</a></li>
+          <li><a class="site-nav__link" href="about.html" aria-current="page">О нас</a></li>
+          <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+        <a class="btn btn--small site-nav__cta" href="contacts.html">Как нас найти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="about-title">
+      <div class="container">
+        <p class="eyebrow hero__anim hero__anim--0">О нас</p>
+        <h1 class="page-hero__title hero__anim hero__anim--1" id="about-title">Кофе, который мы делаем с вниманием</h1>
+        <p class="page-hero__text hero__anim hero__anim--2">MOKA COFFEE — небольшая кофейня, где всё подчинено вкусу: зерно, вода, время и тишина вокруг чашки.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight-top" aria-labelledby="story-title">
+      <div class="container split">
+        <div class="split__content" data-reveal>
+          <p class="eyebrow">История</p>
+          <h2 class="split__title" id="story-title">Всё началось с одной чашки</h2>
+          <div class="prose">
+            <p>MOKA COFFEE родилась из простого желания: сварить кофе так, чтобы его хотелось растянуть. Мы начали с небольшой стойки, нескольких сортов зерна и убеждения, что хороший кофе не требует лишних слов.</p>
+            <p>С тех пор принцип не изменился: в меню немного позиций, но каждую мы готовим внимательно и с уважением к зерну и к гостю.</p>
+          </div>
+        </div>
+        <figure class="split__media" data-reveal>
+          <img src="assets/images/about-interior.svg" width="800" height="600" loading="lazy" alt="Интерьер кофейни: барная стойка, эспрессо-машина и подвесные лампы">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--dark" aria-labelledby="philosophy-title">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Философия</p>
+          <h2 class="section__title" id="philosophy-title">Меньше, но лучше</h2>
+        </header>
+        <ul class="values">
+          <li class="value" data-reveal>
+            <span class="value__num" aria-hidden="true">01</span>
+            <h3 class="value__title">Вкус прежде всего</h3>
+            <p class="value__text">Мы подбираем рецепт под зерно, а не наоборот: не прячем характер кофе за сиропами и не пережариваем ради привычной горечи.</p>
+          </li>
+          <li class="value" data-reveal>
+            <span class="value__num" aria-hidden="true">02</span>
+            <h3 class="value__title">Честность</h3>
+            <p class="value__text">Рассказываем, откуда зерно и как оно обработано, и не обещаем того, чего нет в чашке.</p>
+          </li>
+          <li class="value" data-reveal>
+            <span class="value__num" aria-hidden="true">03</span>
+            <h3 class="value__title">Внимание</h3>
+            <p class="value__text">Кофе — это пауза. Мы не торопим гостей и оставляем в зале тишину, чтобы вкус можно было услышать.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="beans-title">
+      <div class="container split split--reverse">
+        <div class="split__content" data-reveal>
+          <p class="eyebrow">Зерно</p>
+          <h2 class="split__title" id="beans-title">Как мы выбираем зерно</h2>
+          <ol class="steps">
+            <li class="steps__item"><h3 class="steps__title">Смотрим на происхождение</h3><p class="steps__text">Предпочитаем небольшие партии с понятной историей: регион, высота, способ обработки.</p></li>
+            <li class="steps__item"><h3 class="steps__title">Пробуем вслепую</h3><p class="steps__text">Новую партию дегустируем без этикеток, чтобы оценивать вкус, а не название.</p></li>
+            <li class="steps__item"><h3 class="steps__title">Подбираем рецепт</h3><p class="steps__text">Настраиваем помол, температуру воды и время под конкретное зерно.</p></li>
+            <li class="steps__item"><h3 class="steps__title">Подаём в лучшей форме</h3><p class="steps__text">Держим небольшой запас и обновляем зерно, пока оно не потеряло аромат.</p></li>
+          </ol>
+        </div>
+        <figure class="split__media" data-reveal>
+          <img src="assets/images/about-beans.svg" width="800" height="600" loading="lazy" alt="Обжаренные кофейные зёрна и деревянная мерная ложка">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section features" aria-labelledby="baristas-title">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Бариста</p>
+          <h2 class="section__title" id="baristas-title">Люди за стойкой</h2>
+        </header>
+        <ul class="features__grid">
+          <li class="feature-card" data-reveal>
+            <span class="feature-card__num" aria-hidden="true">01</span>
+            <h3 class="feature-card__title">Точность</h3>
+            <p class="feature-card__text">Взвешивают дозу и следят за временем экстракции, чтобы вкус не зависел от настроения.</p>
+          </li>
+          <li class="feature-card" data-reveal>
+            <span class="feature-card__num" aria-hidden="true">02</span>
+            <h3 class="feature-card__title">Вкус</h3>
+            <p class="feature-card__text">Пробуют каждый рецепт и подправляют его, пока чашка не станет сбалансированной.</p>
+          </li>
+          <li class="feature-card" data-reveal>
+            <span class="feature-card__num" aria-hidden="true">03</span>
+            <h3 class="feature-card__title">Гостеприимство</h3>
+            <p class="feature-card__text">Подскажут, чем отличаются напитки, и подберут вариант под ваш вкус — без снисходительности.</p>
+          </li>
+          <li class="feature-card" data-reveal>
+            <span class="feature-card__num" aria-hidden="true">04</span>
+            <h3 class="feature-card__title">Ремесло</h3>
+            <p class="feature-card__text">Следят за молоком, латте-артом и чистотой оборудования: из мелочей складывается вкус.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Галерея</p>
+          <h2 class="section__title" id="gallery-title">Как рождается чашка</h2>
+        </header>
+        <ul class="gallery">
+          <li class="gallery__item" data-reveal>
+            <figure class="gallery__figure">
+              <img src="assets/images/about-brewing.svg" width="800" height="600" loading="lazy" alt="Заваривание кофе в воронке: чайник с тонким носиком и стеклянный сервер">
+              <figcaption class="gallery__caption">Заваривание в воронке</figcaption>
+            </figure>
+          </li>
+          <li class="gallery__item" data-reveal>
+            <figure class="gallery__figure">
+              <img src="assets/images/about-espresso.svg" width="800" height="600" loading="lazy" alt="Приготовление эспрессо: две струи кофе из рожка в белую чашку">
+              <figcaption class="gallery__caption">Эспрессо из рожка</figcaption>
+            </figure>
+          </li>
+          <li class="gallery__item" data-reveal>
+            <figure class="gallery__figure">
+              <img src="assets/images/hero-coffee.svg" width="640" height="640" loading="lazy" alt="Чашка кофе с латте-артом, вид сверху">
+              <figcaption class="gallery__caption">Латте-арт</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="logo logo--light" href="index.html" aria-label="MOKA COFFEE — на главную">MOKA<span>COFFEE</span></a>
+        <p class="footer__text">Specialty coffee shop. Кофе, сваренный с вниманием.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <h2 class="footer__title">Разделы</h2>
+        <ul class="footer__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="footer__contact">
+        <h2 class="footer__title">Посетить нас</h2>
+        <p class="footer__text">Адрес, часы работы и карта — на странице контактов.</p>
+        <a class="footer__link" href="contacts.html">Перейти к контактам</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 MOKA COFFEE. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>
