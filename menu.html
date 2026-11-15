@@ -4,8 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Меню — MOKA COFFEE</title>
-  <meta name="description" content="Меню MOKA COFFEE: классический кофе, авторские напитки и холодные напитки. Цены и корзина.">
+  <meta name="description" content="Меню MOKA COFFEE: классический эспрессо, авторские напитки и холодный кофе с ценами. Выберите напитки и добавьте их в корзину.">
   <meta name="theme-color" content="#F5F0E8">
+  <link rel="canonical" href="https://unithyy.github.io/coffee/menu.html">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MOKA COFFEE">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Меню — MOKA COFFEE">
+  <meta property="og:description" content="Меню MOKA COFFEE: классический эспрессо, авторские напитки и холодный кофе с ценами. Выберите напитки и добавьте их в корзину.">
+  <meta property="og:url" content="https://unithyy.github.io/coffee/menu.html">
+  <meta property="og:image" content="https://unithyy.github.io/coffee/assets/images/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MOKA COFFEE — specialty coffee shop: чашка кофе с латте-артом">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://unithyy.github.io/coffee/assets/images/og-cover.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
@@ -51,8 +65,9 @@
       </div>
     </section>
 
-    <section class="section menu" aria-label="Каталог напитков">
+    <section class="section menu" aria-labelledby="catalog-title">
       <div class="container">
+        <h2 class="visually-hidden" id="catalog-title">Каталог напитков</h2>
         <div class="filters" id="menu-filters" role="group" aria-label="Категории напитков">
           <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">Все напитки</button>
           <button class="filter-btn" type="button" data-filter="classic" aria-pressed="false">Классический кофе</button>
